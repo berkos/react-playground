@@ -18,6 +18,6 @@ module.exports = {
         exclude: /node_module/,
         loader: 'babel-loader'
       }
-    ]
+    ],
   }
 };

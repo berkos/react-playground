@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is the first react project",
   "main": "index.js",
+  "babel": {
+   "presets": ["es2015", "react"]
+  },
   "scripts": {
     "start": "webpack-dev-server"
   },
@@ -16,5 +19,9 @@
     "babel-preset-react": "^6.24.1",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
