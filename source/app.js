@@ -6,7 +6,6 @@ export default class App extends React.Component {
   render() {
     return <Jumbotron className="-fluid text-sm-center"
       style={{backgroundImage: 'url(img/nature.jpg)', color: 'white'}}>
-      <div className="container">
         <h1>Build React.js User Interfaces</h1>
         <p>with Bootstrap and SASS</p>
         <p>
@@ -14,7 +13,6 @@ export default class App extends React.Component {
           <Button className="-danger -sm" disabled/>
         </p>
         <Button className="-primary -md -block" disabled/>
-      </div>
     </Jumbotron>;
   }
 }
