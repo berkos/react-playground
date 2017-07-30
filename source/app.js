@@ -5,7 +5,7 @@ import Jumbotron from './bootstrap/jumbotron';
 export default class App extends React.Component {
   render() {
     return <Jumbotron className="-fluid text-sm-center"
-      style={{backgroundImage: 'url(img/nature.jpg)', color: 'white'}}>
+      style={{backgroundImage: 'url(img/nature.jpg)', color: 'white'}} containerFluid={true}>
         <h1>Build React.js User Interfaces</h1>
         <p>with Bootstrap and SASS</p>
         <p>
