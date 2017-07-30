@@ -16,7 +16,7 @@ export default class Jumbotron extends React.Component {
       this.props.children;
 
     return <div {...props}>
-      {body};
+      {body}
     </div>
   }
 }
