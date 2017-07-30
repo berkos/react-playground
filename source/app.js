@@ -5,12 +5,14 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './appsource.scss';
 
 export default class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
+    this.state = {click: 0};
   }
 
   onClick(e) {
+    this.setState({click: this.state.click + 1});
     console.log(this);
   }
 
@@ -23,9 +25,9 @@ export default class App extends React.Component {
       <p>
         <Button className="-primary -success" href="http://www.google.com" target="_blank"
           label="Discover things"></Button>
-        <Button className="-danger -sm" label="Discover things2">ssss</Button>
+        <Button className="-danger -sm" label="Discover things2"></Button>
       </p>
-      <Button onClick={this.onClick} className="-primary -md -block">Discover things3</Button>
+      <Button onClick={this.onClick} className="-primary -md -block">{this.state.click}</Button>
     </Jumbotron></ReactCSSTransitionGroup>;
   }
 }
