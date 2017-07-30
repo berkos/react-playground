@@ -10,10 +10,10 @@ export default class App extends React.Component {
         <h1>Build React.js User Interfaces</h1>
         <p>with Bootstrap and SASS</p>
         <p>
-          <Button className="-primary -success" href="http://www.google.com" target="_blank"/>
-          <Button className="-danger -sm"/>
+          <Button className="-primary -success" href="http://www.google.com" target="_blank" label="Discover things"></Button>
+          <Button className="-danger -sm" label="Discover things2">ssss</Button>
         </p>
-        <Button className="-primary -md -block"/>
+      <Button className="-primary -md -block">Discover things3</Button>
     </Jumbotron></ReactCSSTransitionGroup>;
   }
 }
