@@ -11,3 +11,16 @@ $text-color: white;
 .custom {
   @include background-it($image_url)
 }
+
+.app-appear {
+  opacity: 0.01;
+}
+.app-enter {
+  opacity: 0.01;
+}
+
+
+app-appear-active{
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
