@@ -1,9 +1,13 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+//@import "../node_modules/bootstrap/scss/bootstrap";
 
 $image_url: '/img/nature.jpg';
 $text-color: white;
 
-.custom {
+@mixin background-it($path) {
   background-image: url($image_url);
-  color: $text-color;
+  $text-color: white;
+}
+
+.custom {
+  @include background-it($image_url)
 }
