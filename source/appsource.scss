@@ -1,0 +1,9 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$image_url: '/img/nature.jpg';
+$text-color: white;
+
+.custom {
+  background-image: url($image_url);
+  color: $text-color;
+}
