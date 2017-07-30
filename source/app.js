@@ -8,15 +8,19 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
-    this.state = {click: 0};
+    this.state = {click: 0, labels: []};
   }
 
   onClick(e) {
-    this.setState({click: this.state.click + 1});
-    console.log(this);
+    let labels = this.state.labels.concat([this.state.click]);
+    this.setState({click: this.state.click + 1, labels: labels});
   }
 
   render() {
+    let buttons = this.state.labels.map((value, i) => {
+      return <Button key={value}>{value}</Button>;
+    });
+
     return <ReactCSSTransitionGroup transitionName="app" transitionAppear={true} transitionAppearTimeout={200}
       transitionEnterTimeout={100} transitionLeaveTimeout={300}><Jumbotron className="-fluid text-sm-center custom"
       containerFluid={true}>
@@ -28,6 +32,11 @@ export default class App extends React.Component {
         <Button className="-danger -sm" label="Discover things2"></Button>
       </p>
       <Button onClick={this.onClick} className="-primary -md -block">{this.state.click}</Button>
+
+      <ReactCSSTransitionGroup transitionName="app" transitionAppear={true} transitionAppearTimeout={200}
+        transitionEnterTimeout={5000} transitionLeaveTimeout={500}>
+        {buttons}
+      </ReactCSSTransitionGroup>
     </Jumbotron></ReactCSSTransitionGroup>;
   }
 }
